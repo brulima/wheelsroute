@@ -1,0 +1,255 @@
+!SESSION 2015-08-13 21:53:20.391 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-13 21:56:53.596
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'Q:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.mule.tooling.core 1 0 2015-08-13 21:57:01.402
+!MESSAGE 'M2_REPO has been previously set. Not adding it again to the workspace.
+
+!ENTRY WAEclipsePlugin 4 0 2015-08-13 21:57:06.980
+!MESSAGE RemoteSystemsTempFilesisOpentrue
+
+!ENTRY WAEclipsePlugin 4 0 2015-08-13 21:57:06.984
+!MESSAGE RemoteSystemsTempFilesisNaturefalse
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2015-08-13 21:59:24.716
+!MESSAGE Could not auto-share project 08-JPA-MapeamentoAvancado
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project '08-JPA-MapeamentoAvancado'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2015-08-13 21:59:24.716
+!MESSAGE Provided SVN information does not match that on disk for project '08-JPA-MapeamentoAvancado'.
+
+!ENTRY org.eclipse.wst.jsdt.core 4 0 2015-08-13 21:59:27.831
+!MESSAGE Problem writing to Q:/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/system.js
+!STACK 0
+java.io.FileNotFoundException: Q:\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\libraries\system.js (Access is denied)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.wst.jsdt.core.compiler.libraries.SystemLibraryLocation.copyFile(SystemLibraryLocation.java:188)
+	at org.eclipse.wst.jsdt.core.compiler.libraries.SystemLibraryLocation.<init>(SystemLibraryLocation.java:115)
+	at org.eclipse.wst.jsdt.core.compiler.libraries.SystemLibraryLocation.getInstance(SystemLibraryLocation.java:51)
+	at org.eclipse.wst.jsdt.launching.JavaRuntime.initializeVMs(JavaRuntime.java:2455)
+	at org.eclipse.wst.jsdt.launching.JavaRuntime.getDefaultVMId(JavaRuntime.java:463)
+	at org.eclipse.wst.jsdt.launching.JavaRuntime.getDefaultVMInstall(JavaRuntime.java:416)
+	at org.eclipse.wst.jsdt.launching.JREContainerInitializer.resolveVM(JREContainerInitializer.java:88)
+	at org.eclipse.wst.jsdt.launching.JREContainerInitializer.initialize(JREContainerInitializer.java:43)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2214)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager$6.run(JavaModelManager.java:2144)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:2160)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.getJsGlobalScopeContainer(JavaModelManager.java:1536)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.getJsGlobalScopeContainer(JavaScriptCore.java:1319)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2747)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2026)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.validateClasspaths(DeltaProcessor.java:2276)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1959)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:389)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 0 2015-08-13 21:59:27.878
+!MESSAGE Problem writing to Q:/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/baseBrowserLibrary.js
+!STACK 0
+java.io.FileNotFoundException: Q:\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\libraries\baseBrowserLibrary.js (Access is denied)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.wst.jsdt.core.compiler.libraries.SystemLibraryLocation.copyFile(SystemLibraryLocation.java:188)
+	at org.eclipse.wst.jsdt.core.compiler.libraries.SystemLibraryLocation.<init>(SystemLibraryLocation.java:115)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer$BasicLibLocation.<init>(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:72)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer$BasicLibLocation.getInstance(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:83)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.getLibraryLocation(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:90)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.getIncludepathEntries(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:94)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.containerPutIfInitializingWithSameEntries(JavaModelManager.java:589)
+	at org.eclipse.wst.jsdt.internal.core.SetContainerOperation.execute(SetContainerOperation.java:54)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.setJsGlobalScopeContainer(JavaScriptCore.java:3901)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.initialize(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:135)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2214)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.getJsGlobalScopeContainer(JavaModelManager.java:1538)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.getJsGlobalScopeContainer(JavaScriptCore.java:1319)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2747)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2026)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.validateClasspaths(DeltaProcessor.java:2276)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1959)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:389)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 0 2015-08-13 21:59:27.878
+!MESSAGE Problem writing to Q:/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/browserWindow.js
+!STACK 0
+java.io.FileNotFoundException: Q:\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\libraries\browserWindow.js (Access is denied)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.wst.jsdt.core.compiler.libraries.SystemLibraryLocation.copyFile(SystemLibraryLocation.java:188)
+	at org.eclipse.wst.jsdt.core.compiler.libraries.SystemLibraryLocation.<init>(SystemLibraryLocation.java:115)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer$BasicLibLocation.<init>(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:72)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer$BasicLibLocation.getInstance(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:83)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.getLibraryLocation(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:90)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.getIncludepathEntries(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:94)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.containerPutIfInitializingWithSameEntries(JavaModelManager.java:589)
+	at org.eclipse.wst.jsdt.internal.core.SetContainerOperation.execute(SetContainerOperation.java:54)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.setJsGlobalScopeContainer(JavaScriptCore.java:3901)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.initialize(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:135)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2214)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.getJsGlobalScopeContainer(JavaModelManager.java:1538)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.getJsGlobalScopeContainer(JavaScriptCore.java:1319)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2747)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2026)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.validateClasspaths(DeltaProcessor.java:2276)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1959)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:389)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 0 2015-08-13 21:59:27.878
+!MESSAGE Problem writing to Q:/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/xhr.js
+!STACK 0
+java.io.FileNotFoundException: Q:\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\libraries\xhr.js (Access is denied)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.wst.jsdt.core.compiler.libraries.SystemLibraryLocation.copyFile(SystemLibraryLocation.java:188)
+	at org.eclipse.wst.jsdt.core.compiler.libraries.SystemLibraryLocation.<init>(SystemLibraryLocation.java:115)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer$BasicLibLocation.<init>(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:72)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer$BasicLibLocation.getInstance(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:83)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.getLibraryLocation(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:90)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.getIncludepathEntries(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:94)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.containerPutIfInitializingWithSameEntries(JavaModelManager.java:589)
+	at org.eclipse.wst.jsdt.internal.core.SetContainerOperation.execute(SetContainerOperation.java:54)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.setJsGlobalScopeContainer(JavaScriptCore.java:3901)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.initialize(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:135)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2214)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.getJsGlobalScopeContainer(JavaModelManager.java:1538)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.getJsGlobalScopeContainer(JavaScriptCore.java:1319)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2747)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2026)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.validateClasspaths(DeltaProcessor.java:2276)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1959)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:389)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 0 2015-08-13 21:59:27.893
+!MESSAGE Problem writing to Q:/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/dom5.js
+!STACK 0
+java.io.FileNotFoundException: Q:\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\libraries\dom5.js (Access is denied)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.wst.jsdt.core.compiler.libraries.SystemLibraryLocation.copyFile(SystemLibraryLocation.java:188)
+	at org.eclipse.wst.jsdt.core.compiler.libraries.SystemLibraryLocation.<init>(SystemLibraryLocation.java:115)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer$BasicLibLocation.<init>(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:72)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer$BasicLibLocation.getInstance(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:83)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.getLibraryLocation(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:90)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.getIncludepathEntries(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:94)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.containerPutIfInitializingWithSameEntries(JavaModelManager.java:589)
+	at org.eclipse.wst.jsdt.internal.core.SetContainerOperation.execute(SetContainerOperation.java:54)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.setJsGlobalScopeContainer(JavaScriptCore.java:3901)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.initialize(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:135)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2214)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.getJsGlobalScopeContainer(JavaModelManager.java:1538)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.getJsGlobalScopeContainer(JavaScriptCore.java:1319)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2747)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2026)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.validateClasspaths(DeltaProcessor.java:2276)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1959)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:389)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2015-08-13 22:00:17.683
+!MESSAGE Could not auto-share project wheels-route-jpa
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'wheels-route-jpa'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2015-08-13 22:00:17.683
+!MESSAGE Provided SVN information does not match that on disk for project 'wheels-route-jpa'.
+
+!ENTRY org.eclipse.ui.ide 4 4 2015-08-13 22:01:19.157
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2015-08-13 22:01:19.173
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2015-08-13 22:01:19.173
+!MESSAGE The project description file (.project) for 'wheels-route-jpa' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY com.google.gwt.eclipse.core 4 0 2015-08-13 22:01:19.609
+!MESSAGE Could not stop source viewer server.
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.initLogging(JettyServer.java:40)
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.<clinit>(JettyServer.java:30)
+	at com.google.gwt.eclipse.core.GWTPlugin.stop(GWTPlugin.java:147)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:950)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:324)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:145)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:160)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Logging bundle must not be null.
+	at org.eclipse.core.internal.runtime.Log.<init>(Log.java:30)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getLog(InternalPlatform.java:351)
+	at org.eclipse.core.runtime.Platform.getLog(Platform.java:1017)
+	at com.google.gdt.eclipse.platform.jetty.JettyEclipseLogger.<clinit>(JettyEclipseLogger.java:35)
+	... 20 more

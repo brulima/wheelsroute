@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;08-JPA-MapeamentoAvancado&apos; to &apos;wheels-route-jpa&apos;" description="Rename resource &apos;08-JPA-MapeamentoAvancado&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/08-JPA-MapeamentoAvancado" name="wheels-route-jpa" stamp="1439514017489" updateReferences="true"/>
+</session>
