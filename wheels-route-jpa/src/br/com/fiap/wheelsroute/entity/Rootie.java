@@ -2,8 +2,11 @@ package br.com.fiap.wheelsroute.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity
@@ -11,6 +14,8 @@ import javax.persistence.SequenceGenerator;
 public class Rootie {
 	@Id
 	@Column(name="CD_ROOTIE")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,
+	generator="SeqRootie")
 	private int codigo;
 	
 	@Column(name="NM_NOME",nullable=false)
@@ -22,12 +27,12 @@ public class Rootie {
 	@Column(name="NR_CEP",nullable=false)
 	private int cep;
 	
-	@Id
 	@ManyToOne
+	@Column(name="CD_TIPOROOTIE")
 	private TipoRootie tipoRootie;
 	
-	@Id
 	@OneToOne
+	@Column(name="CD_ENDERECO")
 	private Endereco endereco;
 
 	public int getCodigo() {
@@ -76,6 +81,11 @@ public class Rootie {
 
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
+	}
+	
+	public void mediaClassificao(){
+		
+		
 	}
 	
 	
