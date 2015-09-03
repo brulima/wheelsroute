@@ -21,10 +21,10 @@ public class Estado {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seqEstado")
 	private int codigo;
 	
-	@Column(name="NM_ESTADO")
+	@Column(name="NM_ESTADO",nullable=false, length=60, unique=true)
 	private String nome;
 	
-	@Column(name="SG_ESTADO")
+	@Column(name="SG_ESTADO",nullable=false, length=2, unique=true)
 	private String sigla;
 
 	public int getCodigo() {

@@ -17,7 +17,7 @@ public class TipoRootie {
 	generator="SeqTipoRootie")
 	private int codigo;
 	
-	@Column(name="NM_NOME",nullable=false)
+	@Column(name="NM_NOME",nullable=false, length=100)
 	private String nome;
 
 	public int getCodigo() {

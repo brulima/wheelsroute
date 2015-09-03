@@ -18,15 +18,15 @@ public class Logradouro {
 	@GeneratedValue(generator="seqLogradouro", strategy=GenerationType.SEQUENCE)
 	private int cep;
 	
-	@Column(name="DS_LOGRADOURO")
+	@Column(name="DS_LOGRADOURO",nullable=false, length=60)
 	private String descricao;
 	
 	@ManyToOne
-	@Column(name="CD_BAIRRO")
+	@Column(name="CD_BAIRRO",nullable=false)
 	private int codigo;
 	
 	@OneToOne
-	@Column(name="CD_TIPO_LOG")
+	@Column(name="CD_TIPO_LOG",nullable=false)
 	private TipoLogradouro tipoLogradouro;
 
 	public int getCodigo() {

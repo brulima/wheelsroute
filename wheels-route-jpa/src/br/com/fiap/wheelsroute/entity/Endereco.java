@@ -17,14 +17,14 @@ public class Endereco {
 	@GeneratedValue(generator="seqEndereco", strategy = GenerationType.SEQUENCE)
 	private int codigo;
 	
-	@Column(name="NM_ENDERECO")
+	@Column(name="NM_ENDERECO",nullable=false)
 	private int numero;
 	
-	@Column(name="DS_COMPLEMENTO")
+	@Column(name="DS_COMPLEMENTO", length=20)
 	private String complemento;
 	
 	@ManyToOne
-	@Column(name="NR_CEP")
+	@Column(name="NR_CEP",nullable=false)
 	private Logradouro lougradouro;
 
 	public int getCodigo() {

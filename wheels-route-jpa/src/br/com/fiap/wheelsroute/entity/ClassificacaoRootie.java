@@ -8,23 +8,23 @@ import javax.persistence.ManyToOne;
 @Entity
 public class ClassificacaoRootie {
 	
-	@Column(name="NR_NOTA")
+	@Column(name="NR_NOTA",nullable=false)
 	private float nota;
 	
-	@Column(name="DS_COMENTARIO")
+	@Column(name="DS_COMENTARIO", length=300)
 	private String comentatio;
 	
-	@Column(name="CD_SITUACAO")
+	@Column(name="CD_SITUACAO",nullable=false)
 	private int situacao;
 	
 	@Id
 	@ManyToOne
-	@Column(name="CD_ROOTIE")
+	@Column(name="CD_ROOTIE",nullable=false)
 	private Rootie rootie;
 	
 	@Id
 	@ManyToOne
-	@Column(name="CD_USUARIO")
+	@Column(name="CD_USUARIO",nullable=false)
 	private Usuario usuario;
 
 	public float getNota() {

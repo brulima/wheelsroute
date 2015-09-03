@@ -12,13 +12,13 @@ import javax.persistence.SequenceGenerator;
 @Entity
 @SequenceGenerator(name="SeqRootie", sequenceName="SEQ_ROOTIE", allocationSize=1)
 public class Rootie {
+	
 	@Id
 	@Column(name="CD_ROOTIE")
-	@GeneratedValue(strategy=GenerationType.SEQUENCE,
-	generator="SeqRootie")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="SeqRootie")
 	private int codigo;
 	
-	@Column(name="NM_NOME",nullable=false)
+	@Column(name="NM_NOME",nullable=false,length=50)
 	private String nome;
 	
 	@Column(name="NR_NOTA")
@@ -28,11 +28,11 @@ public class Rootie {
 	private int cep;
 	
 	@ManyToOne
-	@Column(name="CD_TIPOROOTIE")
+	@Column(name="CD_TIPOROOTIE",nullable=false)
 	private TipoRootie tipoRootie;
 	
 	@OneToOne
-	@Column(name="CD_ENDERECO")
+	@Column(name="CD_ENDERECO",nullable=false)
 	private Endereco endereco;
 
 	public int getCodigo() {

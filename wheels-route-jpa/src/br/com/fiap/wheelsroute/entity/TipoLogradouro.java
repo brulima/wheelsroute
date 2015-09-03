@@ -16,7 +16,7 @@ public class TipoLogradouro {
 	@GeneratedValue(generator="seqTipoLogradouro", strategy=GenerationType.SEQUENCE)
 	private int codigo;
 	
-	@Column(name="DS_TIPO_LOG")
+	@Column(name="DS_TIPO_LOG",nullable=false, unique=true, length=30)
 	private String descricao;
 
 	public int getCodigo() {

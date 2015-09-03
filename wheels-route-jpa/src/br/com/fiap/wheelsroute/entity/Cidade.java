@@ -17,11 +17,11 @@ public class Cidade {
 	@GeneratedValue(generator="seqCidade", strategy=GenerationType.SEQUENCE)
 	private int codigo;
 	
-	@Column(name="NM_CIDADE")
+	@Column(name="NM_CIDADE",nullable=false, length=60)
 	private String nome;
 	
 	@ManyToOne
-	@Column(name="CD_ESTADO")
+	@Column(name="CD_ESTADO",nullable=false)
 	private Estado estado;
 	
 	public int getCodigo() {
