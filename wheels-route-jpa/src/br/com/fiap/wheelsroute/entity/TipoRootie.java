@@ -6,15 +6,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
-@SequenceGenerator(name="SeqTipoRootie", sequenceName="SEQ_TIPOROOTIE", allocationSize=1)
+@Table(name="WR_TIPO_ROOTIE")
 public class TipoRootie {
 	
 	@Id
-	@Column(name="CD_TIPOROOTIE")
-	@GeneratedValue(strategy=GenerationType.SEQUENCE,
-	generator="SeqTipoRootie")
+	@Column(name="CD_TIPO_ROOTIE")
 	private int codigo;
 	
 	@Column(name="NM_NOME",nullable=false, length=100)

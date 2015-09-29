@@ -6,9 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
-@SequenceGenerator(name="seqUsuario", sequenceName="SEQ_USUARIO", allocationSize=1)
+@Table(name="WR_USUARIO")
+@SequenceGenerator(name="seqUsuario", sequenceName="SQ_WR_USUARIO", allocationSize=1)
 public class Usuario {
 	
 	@Id
@@ -16,10 +18,10 @@ public class Usuario {
 	@GeneratedValue(generator="seqUsuario", strategy=GenerationType.SEQUENCE)
 	private int codigo;
 	
-	@Column(name="NM_USUARIO",nullable=false, length=80)
+	@Column(name="NM_NOME",nullable=false, length=80)
 	private String nome;
 	
-	@Column(name="DS_EMIAL",nullable=false, length=50)
+	@Column(name="DS_EMAIL",nullable=false, length=50)
 	private String email;
 	
 	@Column(name="DS_LOGIN", length=40)

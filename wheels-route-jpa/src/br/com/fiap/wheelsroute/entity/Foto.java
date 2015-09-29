@@ -1,16 +1,20 @@
 package br.com.fiap.wheelsroute.entity;
 
+import java.sql.Blob;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
-@SequenceGenerator(name="seqFoto",sequenceName="SEQ_FOTO",allocationSize=1)
+@Table(name="WR_FOTO")
+@SequenceGenerator(name="seqFoto",sequenceName="SQ_WR_FOTO",allocationSize=1)
 public class Foto {
 	
 		
@@ -20,12 +24,11 @@ public class Foto {
 		private int codigo;
 		
 		@ManyToOne
-		@Column(name="CD_ROOTIE")
+		@JoinColumn(name="CD_ROOTIE")
 		private Rootie rootie;
 		
-		@OneToOne
-		@Column(name="CD_USUARIO")
-		private Usuario usuario;
+		@Column(name="DS_FOTO", nullable=false)
+		private Blob foto;
 
 		public int getCodigo() {
 			return codigo;
@@ -43,12 +46,12 @@ public class Foto {
 			this.rootie = rootie;
 		}
 
-		public Usuario getUsuario() {
-			return usuario;
+		public Blob getFoto() {
+			return foto;
 		}
 
-		public void setUsuario(Usuario usuario) {
-			this.usuario = usuario;
+		public void setFoto(Blob usuario) {
+			this.foto = usuario;
 		}
 
 }

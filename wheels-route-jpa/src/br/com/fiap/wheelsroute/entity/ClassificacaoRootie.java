@@ -1,12 +1,17 @@
 package br.com.fiap.wheelsroute.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
-public class ClassificacaoRootie {
+@Table(name="WR_CADASTRO_ROOTIE")
+public class ClassificacaoRootie implements Serializable{
 	
 	@Column(name="NR_NOTA",nullable=false)
 	private float nota;
@@ -19,12 +24,12 @@ public class ClassificacaoRootie {
 	
 	@Id
 	@ManyToOne
-	@Column(name="CD_ROOTIE",nullable=false)
+	@JoinColumn(name="CD_ROOTIE",nullable=false)
 	private Rootie rootie;
 	
 	@Id
 	@ManyToOne
-	@Column(name="CD_USUARIO",nullable=false)
+	@JoinColumn(name="CD_USUARIO",nullable=false)
 	private Usuario usuario;
 
 	public float getNota() {

@@ -6,14 +6,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
-@SequenceGenerator(name="seqTipoLogradouro", sequenceName="SEQ_TIPO_LOUGRADOURO", allocationSize=1)
+@Table(name="WR_TIPO_LOG")
 public class TipoLogradouro {
 
 	@Id
 	@Column(name="CD_TIPO_LOG")
-	@GeneratedValue(generator="seqTipoLogradouro", strategy=GenerationType.SEQUENCE)
 	private int codigo;
 	
 	@Column(name="DS_TIPO_LOG",nullable=false, unique=true, length=30)

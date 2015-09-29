@@ -5,11 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
-@SequenceGenerator(name="seqCidade", sequenceName="SEQ_CIDADE", allocationSize=1)
+@Table(name="WR_CIDADE")
+@SequenceGenerator(name="seqCidade", sequenceName="SQ_WR_CIDADE", allocationSize=1)
 public class Cidade {
 	
 	@Id
@@ -21,7 +24,7 @@ public class Cidade {
 	private String nome;
 	
 	@ManyToOne
-	@Column(name="CD_ESTADO",nullable=false)
+	@JoinColumn(name="CD_ESTADO",nullable=false)
 	private Estado estado;
 	
 	public int getCodigo() {

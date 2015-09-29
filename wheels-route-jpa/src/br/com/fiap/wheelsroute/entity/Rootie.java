@@ -5,12 +5,31 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.NamedStoredProcedureQueries;
+import javax.persistence.NamedStoredProcedureQuery;
+import javax.persistence.ParameterMode;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.StoredProcedureParameter;
+import javax.persistence.Table;
 
 @Entity
-@SequenceGenerator(name="SeqRootie", sequenceName="SEQ_ROOTIE", allocationSize=1)
+@Table(name="WR_ROOTIE")
+@SequenceGenerator(name="SeqRootie", sequenceName="SQ_WR_ROOTIE", allocationSize=1)
+@NamedStoredProcedureQueries(value={
+		@NamedStoredProcedureQuery(name="insereRootie", procedureName="PRC_INSERE_ROOTIE", parameters={
+				@StoredProcedureParameter(mode=ParameterMode.IN, name="P_ESTADO", type=Integer.class), 
+				@StoredProcedureParameter(mode=ParameterMode.IN, name="P_CIDADE", type=String.class), 
+				@StoredProcedureParameter(mode=ParameterMode.IN, name="P_BAIRRO", type=String.class), 
+				@StoredProcedureParameter(mode=ParameterMode.IN, name="P_LOGRADOURO", type=String.class), 
+				@StoredProcedureParameter(mode=ParameterMode.IN, name="P_CEP", type=Integer.class), 
+				@StoredProcedureParameter(mode=ParameterMode.IN, name="P_NUMERO", type=Integer.class), 
+				@StoredProcedureParameter(mode=ParameterMode.IN, name="P_TIPO_LOGRADOURO", type=Integer.class), 
+				@StoredProcedureParameter(mode=ParameterMode.IN, name="P_NOME_ROOTIE", type=String.class), 
+				@StoredProcedureParameter(mode=ParameterMode.IN, name="P_TIPO_ROOTIE", type=Integer.class), 
+				@StoredProcedureParameter(mode=ParameterMode.IN, name="P_LATITUDE", type=String.class), 
+				@StoredProcedureParameter(mode=ParameterMode.IN, name="P_LONGITUDE", type=String.class)})})
 public class Rootie {
 	
 	@Id
@@ -21,18 +40,12 @@ public class Rootie {
 	@Column(name="NM_NOME",nullable=false,length=50)
 	private String nome;
 	
-	@Column(name="NR_NOTA")
-	private double nota;
-	
-	@Column(name="NR_CEP",nullable=false)
-	private int cep;
-	
 	@ManyToOne
-	@Column(name="CD_TIPOROOTIE",nullable=false)
+	@JoinColumn(name="CD_TIPO_ROOTIE",nullable=false)
 	private TipoRootie tipoRootie;
 	
-	@OneToOne
-	@Column(name="CD_ENDERECO",nullable=false)
+	@ManyToOne
+	@JoinColumn(name="CD_ENDERECO",nullable=false)
 	private Endereco endereco;
 
 	public int getCodigo() {
@@ -50,23 +63,7 @@ public class Rootie {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	public double getNota() {
-		return nota;
-	}
-
-	public void setNota(double nota) {
-		this.nota = nota;
-	}
-
-	public int getCep() {
-		return cep;
-	}
-
-	public void setCep(int cep) {
-		this.cep = cep;
-	}
-
+	
 	public TipoRootie getTipoRootie() {
 		return tipoRootie;
 	}

@@ -1,18 +1,25 @@
 package br.com.fiap.wheelsroute.entity;
 
-import javax.persistence.Column;
+import java.io.Serializable;
+
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
-public class FavoritoRootie {
+@Table(name="WR_FAVORITO_ROOTIE")
+public class FavoritoRootie implements Serializable{
 	
+	@Id
 	@ManyToOne
-	@Column(name="CD_USUARIO")
+	@JoinColumn(name="CD_USUARIO")
 	private Usuario codigo_usuario;
 	
+	@Id
 	@ManyToOne
-	@Column(name="CD_ROOTIE")
+	@JoinColumn(name="CD_ROOTIE")
 	private Rootie codigo_rootie;
 
 	public Usuario getCodigo_usuario() {
